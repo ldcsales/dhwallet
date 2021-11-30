@@ -6,8 +6,6 @@ import androidx.fragment.app.FragmentContainerView
 
 class MainActivity : AppCompatActivity() {
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -15,6 +13,6 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, TransferFragment())
             .commit()
-
     }
 }
+
