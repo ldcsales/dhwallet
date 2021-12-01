@@ -10,6 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //CRIADO FRAGMENT MANAGER
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, TransferFragment())
             .commit()
