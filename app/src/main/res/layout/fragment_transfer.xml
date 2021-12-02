@@ -29,6 +29,7 @@
         app:titleTextColor="@color/white">
 
         <ImageView
+            android:id="@+id/profile"
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_gravity="end"
