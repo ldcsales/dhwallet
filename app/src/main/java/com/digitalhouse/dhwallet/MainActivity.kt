@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         //CRIADO FRAGMENT MANAGER
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, TransactionFragment.newInstance("R$45,35","R$536"))
+            .replace(R.id.fragment_container, TransactionFragment.newInstance("R$ 45,35","R$ 536"))
             .addToBackStack("trasaction_fragment")
             .commit()
 

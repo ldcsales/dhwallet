@@ -7,6 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.digitalhouse.dhwallet.adapter.ContactAdapter
+import com.digitalhouse.dhwallet.adapter.SpentsAdapter
+import com.digitalhouse.dhwallet.model.Contact
+import com.digitalhouse.dhwallet.model.ContactType
+import com.digitalhouse.dhwallet.model.Spents
+import com.digitalhouse.dhwallet.model.SpentsType
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,18 +54,28 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
         entrada?.let{
             entradaView.text = it
         }
+        val saidaView = view.findViewById<TextView>(R.id.saida)
+        saida?.let{
+            saidaView.text = it
+        }
+
+        val listSpents = MutableList(3){
+            Spents(
+                image = "https://cdn3.iconfinder.com/data/icons/picons-social/57/42-dribbble-512.png",
+                name = "Dribble Inc.",
+                type = SpentsType.PAGAMENTO,
+                money = "+R$ 45",
+
+            )
+        }
+
+        val recycler = view.findViewById<RecyclerView>(R.id.recycler_transaction)
+        recycler.layoutManager =
+            LinearLayoutManager(view.context, LinearLayoutManager.VERTICAL, false)
+        recycler.adapter = SpentsAdapter(listSpents)
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TransactionFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
 
 
