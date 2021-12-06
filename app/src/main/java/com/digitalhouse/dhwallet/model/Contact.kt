@@ -8,7 +8,7 @@ class Contact(
     val image: String,
     val name: String,
     val type: ContactType
-): Parcelable
+) : Parcelable
 
 enum class ContactType(val description: String) {
     IRMA("Irmã"),
