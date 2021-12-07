@@ -10,6 +10,11 @@ import com.bumptech.glide.Glide
 import com.digitalhouse.dhwallet.R
 import com.digitalhouse.dhwallet.model.Contact
 
+private const val HEADER = 0
+private const val CONTENT = 1
+private const val FOOTER = 2
+
+
 class ContactAdapter(private val items: List<Contact>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
